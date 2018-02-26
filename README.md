@@ -3,3 +3,8 @@ Docker image for store team CI tests
 
 [![](https://images.microbadger.com/badges/version/ridibooks/store-php-test.svg)](http://microbadger.com/images/ridibooks/store-php-test "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/ridibooks/store-php-test.svg)](http://microbadger.com/images/ridibooks/store-php-test "Get your own version badge on microbadger.com")
+
+## Supported Docker Images
+
+* ridibooks/store-php-test:7.0 ([Dockerfile](https://github.com/ridibooks-docker/store-php-test/blob/master/7.0/Dockerfile)) - PHP 7.0 image based on ridibooks/php
+* ridibooks/store-php-test:7.1 ([Dockerfile](https://github.com/ridibooks-docker/store-php-test/blob/master/7.1/Dockerfile)) - PHP 7.1 image based on ridibooks/php
