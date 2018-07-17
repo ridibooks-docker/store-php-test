@@ -1,11 +1,14 @@
 Docker image for store team CI tests
 ========================================================
 
-[![](https://images.microbadger.com/badges/version/ridibooks/store-php-test:7.0.svg)](http://microbadger.com/images/ridibooks/store-php-tes:7.0t "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/ridibooks/store-php-test:7.0.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.0 "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/ridibooks/store-php-test:7.0.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.0 "Get your own version badge on microbadger.com")
 
 [![](https://images.microbadger.com/badges/version/ridibooks/store-php-test:7.1.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.1 "Get your own version badge on microbadger.com")
 [![](https://images.microbadger.com/badges/image/ridibooks/store-php-test:7.1.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.1 "Get your own version badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/ridibooks/store-php-test:7.2.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.2 "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/ridibooks/store-php-test:7.2.svg)](http://microbadger.com/images/ridibooks/store-php-test:7.2 "Get your own version badge on microbadger.com")
 
 ## Supported Docker Images
 
