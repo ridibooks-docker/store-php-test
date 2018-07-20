@@ -14,3 +14,4 @@ Docker image for store team CI tests
 
 * ridibooks/store-php-test:7.0 ([Dockerfile](https://github.com/ridibooks-docker/store-php-test/blob/master/7.0/Dockerfile)) - PHP 7.0 image based on ridibooks/php
 * ridibooks/store-php-test:7.1 ([Dockerfile](https://github.com/ridibooks-docker/store-php-test/blob/master/7.1/Dockerfile)) - PHP 7.1 image based on ridibooks/php
+* ridibooks/store-php-test:7.2 ([Dockerfile](https://github.com/ridibooks-docker/store-php-test/blob/master/7.2/Dockerfile)) - PHP 7.2 image based on ridibooks/php
