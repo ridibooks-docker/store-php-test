@@ -4,7 +4,7 @@ LABEL maintainer="Heechan Yang <heechan@ridi.com>"
 RUN apt-get update && apt-get install -yqq \
     git \
     libmcrypt-dev \
-    libpng-dev    
+    libpng-dev \
     python3 \
     python3-pip \
     unzip \
