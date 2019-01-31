@@ -1,5 +1,4 @@
 FROM php:7.1
-LABEL maintainer="Heechan Yang <heechan@ridi.com>"
 
 RUN apt-get update && apt-get install -yqq \
     git \

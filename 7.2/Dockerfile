@@ -1,5 +1,4 @@
 FROM php:7.2
-LABEL maintainer="Heechan Yang <heechan@ridi.com>"
 
 RUN apt-get update && apt-get install -yqq \
     git \
@@ -16,5 +15,5 @@ RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/bin/composer
 
 RUN docker-php-ext-install bcmath pdo_mysql zip
-RUN pecl install apcu xdebug && docker-php-ext-enable apcu xdebug
+RUN pecl install apcu xdebug ds && docker-php-ext-enable apcu xdebug ds
 RUN pip3 install awscli --upgrade
