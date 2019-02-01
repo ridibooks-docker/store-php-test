@@ -6,13 +6,10 @@ RUN apt-get update && apt-get install -yqq \
     python3 \
     python3-pip \
     unzip \
-    zlib1g-dev
+    zlib1g-dev \
+    wget
 
-RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-RUN php -r "if (hash_file('SHA384', 'composer-setup.php') === '93b54496392c062774670ac18b134c3b3a95e5a5e5c8f1a9f115f203b75bf9a129d5daa8ba6a13e2cc8a1da0806388a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-RUN php composer-setup.php
-RUN php -r "unlink('composer-setup.php');"
-RUN mv composer.phar /usr/bin/composer
+RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/da7be05fa1c9f68b9609726451d1aaac7dd832cb/web/installer -O - -q | php --install-dir=/usr/bin/ --quiet
 
 RUN docker-php-ext-install bcmath pdo_mysql zip
 RUN pecl install apcu xdebug ds && docker-php-ext-enable apcu xdebug ds
