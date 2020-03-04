@@ -13,5 +13,5 @@ RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/da7be05fa1c9
 RUN mv /usr/bin/composer.phar /usr/bin/composer
 
 RUN docker-php-ext-install bcmath pdo_mysql zip
-RUN pecl install apcu xdebug ds && docker-php-ext-enable apcu xdebug ds
+RUN pecl install apcu xdebug ds couchbase && docker-php-ext-enable apcu xdebug ds couchbase
 RUN pip3 install awscli --upgrade
