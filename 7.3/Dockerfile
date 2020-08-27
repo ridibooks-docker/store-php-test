@@ -3,7 +3,7 @@ FROM php:7.3-fpm-stretch
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     wget \
-    nc
+    netcat
 
 
 RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-6-amd64.deb
