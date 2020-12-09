@@ -52,5 +52,5 @@ RUN docker-php-ext-install \
     zip
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
-
+COPY apcu.ini /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini
 RUN pip3 install awscli --upgrade
