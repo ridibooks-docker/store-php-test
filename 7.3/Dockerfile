@@ -38,8 +38,8 @@ RUN docker-php-ext-enable \
     couchbase.so \
     ds.so \
     mcrypt.so \
-    opcache.so \
-    pcov
+    opcache.so
+
 
 # sockets: required by inicis
 # gd: required by phpoffice/phpspreadsheet
