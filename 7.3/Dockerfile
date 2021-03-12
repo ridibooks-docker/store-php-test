@@ -30,7 +30,6 @@ RUN pecl install apcu-5.1.17
 RUN pecl install couchbase-2.6.2
 RUN pecl install ds-1.2.9
 RUN pecl install mcrypt-1.0.3
-RUN pecl install pcov
 
 # Extensions installed but not enabled by default, or installed by PECL needs to be enabled manually
 RUN docker-php-ext-enable \
