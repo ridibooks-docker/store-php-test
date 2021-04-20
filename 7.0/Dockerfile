@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -yqq \
     libcouchbase-dev
 
 RUN docker-php-ext-install bcmath pdo_mysql mcrypt zip
-RUN pecl install apcu xdebug ds couchbase && docker-php-ext-enable apcu.so ds.so couchbase.so
+RUN pecl install apcu-5.1.17 xdebug-2.9.6 ds-1.2.9 couchbase-2.6.2 && docker-php-ext-enable apcu.so ds.so couchbase.so
 RUN pip3 install awscli --upgrade
