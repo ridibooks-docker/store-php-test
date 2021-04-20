@@ -11,8 +11,6 @@ RUN dpkg -i couchbase-release-1.0-6-amd64.deb
 
 RUN wget -qO - https://packages.confluent.io/deb/6.1/archive.key | apt-key add -
 
-RUN apt-add-repository 'deb http://deb.debian.org/debian stretch-backports main'
-
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1
 
