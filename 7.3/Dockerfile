@@ -15,7 +15,6 @@ WORKDIR /librdkafka-1.6.1
 RUN ./configure --install-deps
 RUN make && make install
 
-
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1
 
