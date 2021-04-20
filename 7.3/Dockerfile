@@ -9,7 +9,13 @@ RUN apt-get update && apt-get install -y \
 RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-6-amd64.deb
 RUN dpkg -i couchbase-release-1.0-6-amd64.deb
 
-RUN wget -qO - https://packages.confluent.io/deb/6.1/archive.key | apt-key add -
+RUN wget https://github.com/edenhill/librdkafka/archive/refs/tags/v1.6.1.tar.gz
+RUN tar xvfz v1.6.1.tar.gz -C /
+
+WORKDIR /librdkafka-1.6.1
+RUN ./configure --install-deps
+RUN make && make install
+
 
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1
@@ -26,8 +32,7 @@ RUN apt-get update && apt-get install -y \
     libgmp3-dev \
     openjdk-8-jre-headless \
     python3-pip \
-    zlib1g-dev \
-    librdkafka-dev
+    zlib1g-dev
 
 RUN pecl install apcu-5.1.17
 RUN pecl install couchbase-2.6.2
