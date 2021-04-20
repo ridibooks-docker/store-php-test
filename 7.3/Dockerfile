@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
 RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-6-amd64.deb
 RUN dpkg -i couchbase-release-1.0-6-amd64.deb
 
+RUN apt-add-repository 'deb http://deb.debian.org/debian stretch-backports main'
+
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
 RUN mkdir -p /usr/share/man/man1
 
@@ -24,12 +26,14 @@ RUN apt-get update && apt-get install -y \
     libgmp3-dev \
     openjdk-8-jre-headless \
     python3-pip \
-    zlib1g-dev
+    zlib1g-dev \
+    librdkafka-dev/stretch-backports
 
 RUN pecl install apcu-5.1.17
 RUN pecl install couchbase-2.6.2
 RUN pecl install ds-1.2.9
 RUN pecl install mcrypt-1.0.3
+RUN pecl install rdkafka-5.0.0
 
 # Extensions installed but not enabled by default, or installed by PECL needs to be enabled manually
 RUN docker-php-ext-enable \
@@ -37,7 +41,8 @@ RUN docker-php-ext-enable \
     couchbase.so \
     ds.so \
     mcrypt.so \
-    opcache.so
+    opcache.so \
+    rdkafka.so
 
 
 # sockets: required by inicis
