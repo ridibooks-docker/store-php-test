@@ -3,11 +3,13 @@ FROM php:7.3-fpm-stretch
 RUN apt-get update && apt-get install -y \
     software-properties-common \
     wget \
-    netcat
-
+    netcat \
+    gnupg
 
 RUN wget http://packages.couchbase.com/releases/couchbase-release/couchbase-release-1.0-6-amd64.deb
 RUN dpkg -i couchbase-release-1.0-6-amd64.deb
+
+RUN wget -qO - https://packages.confluent.io/deb/6.1/archive.key | apt-key add -
 
 RUN apt-add-repository 'deb http://deb.debian.org/debian stretch-backports main'
 
@@ -27,7 +29,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-8-jre-headless \
     python3-pip \
     zlib1g-dev \
-    librdkafka-dev/stretch-backports
+    librdkafka-dev
 
 RUN pecl install apcu-5.1.17
 RUN pecl install couchbase-2.6.2
